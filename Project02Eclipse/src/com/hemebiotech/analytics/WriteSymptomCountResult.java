@@ -16,7 +16,7 @@ public class WriteSymptomCountResult {
 	 * @param filepath a full or partial path to file with symptom strings in it,
 	 *                 one per line
 	 */
-	public void writeSomething() {
+	public void writeCount() {
 
 		if (filepath != null) {
 			try {
