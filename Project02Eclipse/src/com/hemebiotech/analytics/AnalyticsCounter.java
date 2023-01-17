@@ -8,7 +8,9 @@ public class AnalyticsCounter {
 		FileReader.GetSymptoms();
 
 		WriteSymptomCountResult WriterResult = new WriteSymptomCountResult("Project02Eclipse/result.out");
-		WriterResult.writeSomething();
+		WriterResult.writeCount();
 
+		SymptomsCounter NumberOfOccurence = new SymptomsCounter();
+		NumberOfOccurence.Counter(FileReader.GetSymptoms());
 	}
 }
