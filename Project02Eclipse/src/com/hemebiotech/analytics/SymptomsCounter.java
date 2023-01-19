@@ -10,7 +10,7 @@ public class SymptomsCounter {
 	List<String> myList = new ArrayList<String>();
 	Map<String, Integer> myMap = new HashMap<String, Integer>();
 
-	public void Counter(List<String> myList) {
+	public Map<String, Integer> Counter(List<String> myList) {
 
 		for (String symptom : myList) {
 
@@ -21,6 +21,7 @@ public class SymptomsCounter {
 			}
 
 		}
-		System.out.println(myMap);
+
+		return myMap;
 	}
 }
