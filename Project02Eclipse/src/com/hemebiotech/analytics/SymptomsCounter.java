@@ -1,21 +1,19 @@
 package com.hemebiotech.analytics;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class SymptomsCounter {
 
-	List<String> myList = new ArrayList<String>();
-	Map<String, Integer> myMap = new HashMap<String, Integer>();
+	public static Map<String, Integer> counter(List<String> myList) {
 
-	public Map<String, Integer> Counter(List<String> myList) {
+		Map<String, Integer> myMap = new TreeMap<String, Integer>();
 
 		for (String symptom : myList) {
 
 			if (myMap.containsKey(symptom)) {
-				myMap.put(symptom, myMap.getOrDefault(symptom, 1) + 1);
+				myMap.put(symptom, myMap.get(symptom) + 1);
 			} else {
 				myMap.put(symptom, 1);
 			}
