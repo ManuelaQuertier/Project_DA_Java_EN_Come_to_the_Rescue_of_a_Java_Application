@@ -5,7 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
 
-public class WriteSymptomCountResult {
+public class WriteSymptomCountResult implements ISymptomWriter {
 
 	private String filepath;
 	public Map<String, Integer> myMap;
@@ -20,6 +20,8 @@ public class WriteSymptomCountResult {
 	 * @param filepath a full or partial path to file with symptom strings in it,
 	 *                 one per line
 	 */
+
+	@Override
 	public void writeCount() {
 
 		if (filepath != null) {
