@@ -7,26 +7,25 @@ import java.util.TreeMap;
 public class SymptomsCounter {
 	/**
 	 * This method order the symptoms in a treeMap and count the number of
-	 * occurrence for itch symptom
+	 * occurrence for each symptom
 	 * 
-	 * @param myList a list of symptoms
+	 * @param symptomsList a list of symptoms
+	 * 
 	 * @return a treeMap where keys are the symptoms names and values are the number
 	 *         of occurrence
 	 */
-	public static Map<String, Integer> counter(List<String> myList) {
+	public static Map<String, Integer> counter(List<String> symptomsList) {
 
-		Map<String, Integer> myMap = new TreeMap<String, Integer>();
+		Map<String, Integer> symptomsMap = new TreeMap<String, Integer>();
 
-		for (String symptom : myList) {
+		for (String symptom : symptomsList) {
 
-			if (myMap.containsKey(symptom)) {
-				myMap.put(symptom, myMap.get(symptom) + 1);
+			if (symptomsMap.containsKey(symptom)) {
+				symptomsMap.put(symptom, symptomsMap.get(symptom) + 1);
 			} else {
-				myMap.put(symptom, 1);
+				symptomsMap.put(symptom, 1);
 			}
-
 		}
-
-		return myMap;
+		return symptomsMap;
 	}
 }
