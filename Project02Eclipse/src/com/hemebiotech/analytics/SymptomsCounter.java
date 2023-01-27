@@ -4,6 +4,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
+/**
+ * 
+ * This the class where the Counter method is implemented.
+ *
+ */
 public class SymptomsCounter {
 	/**
 	 * This method order the symptoms in a treeMap and count the number of
