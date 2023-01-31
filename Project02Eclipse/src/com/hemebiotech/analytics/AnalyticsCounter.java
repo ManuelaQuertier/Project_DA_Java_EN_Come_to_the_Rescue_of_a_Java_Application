@@ -16,7 +16,7 @@ public class AnalyticsCounter {
 	public static void main(String args[]) throws Exception {
 
 		ReadSymptomDataFromFile FileReader = new ReadSymptomDataFromFile("Project02Eclipse/symptoms.txt");
-		List<String> symptoms = FileReader.GetSymptoms();
+		List<String> symptoms = FileReader.getSymptoms();
 
 		WriteSymptomCountResult WriterResult = new WriteSymptomCountResult("Project02Eclipse/result.out",
 				SymptomsCounter.counter(symptoms));
